@@ -1,0 +1,63 @@
+
+svg{
+    width:50%;
+    display: block;
+    margin:auto;
+}
+
+#circle{
+    fill:#FFFFFF;
+    stroke:#000000;
+    stroke-miterlimit:60px;
+    stroke-width:5;
+}
+
+#arrow{
+    fill:none;
+}
+svg:hover {
+    fill:none;
+    stroke-miterlimit:10px;
+	stroke:rgb(29, 127, 207);
+    stroke-width:5;
+	stroke-miterlimit:90px;
+	stroke-dasharray: 300;
+	stroke-dashoffset: 6;
+	-webkit-animation: dash 8s ease infinite;
+	-o-animation: dash 8s ease infinite;
+	-moz-animation: dash ease linear infinite;
+	animation: dash 8s ease infinite;
+  }
+  
+  #l, #firstA, #r, #secondA{
+    -webkit-animation: blink 8s ease infinite;
+    -o-animation: blink 8s ease infinite;
+    -moz-animation: blink ease linear infinite;
+    animation: blink 8s ease infinite;
+
+  }
+
+  @-webkit-keyframes blink {
+    0%, 100%{
+    opacity: 1;
+    transform:skewX(15deg);
+    }
+    50% {
+      opacity: 0;
+      transform:skewX(0deg);
+      transform:skewY(0deg);
+      }
+    }
+@-webkit-keyframes dash {
+	0%, 100%{
+  stroke-dashoffset: 2000px;
+  transform:skewY(15deg);
+  stroke-width: 2px;
+	}
+	50% {
+  stroke-dashoffset:3000;
+  transform:skewY(2deg);
+  stroke-width: 5px;
+  
+		}
+	}
